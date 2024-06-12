@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">43295ae1094232007f44e1046c8ff615</sp_column>
+        <sp_widget display_value="Notes List">06948fa8db3133000613a08a4896194c</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-30 18:18:27</sys_created_on>
+        <sys_id>34d587e4db3133000613a08a48961960</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Important Stuff</sys_name>
+        <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
+        <sys_update_name>sp_instance_34d587e4db3133000613a08a48961960</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-30 23:12:31</sys_updated_on>
+        <title>Important Stuff</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"title": {
+		"value": "Important Stuff",
+		"displayValue": "Important Stuff"
+	},
+	"maximum_records_to_display": {
+		"value": "6",
+		"displayValue": "6"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=34d587e4db3133000613a08a48961960"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</application>
+        <file_path/>
+        <instance_id>59bab08adb55825002022a59139619f0</instance_id>
+        <instance_name>dev252402</instance_name>
+        <name>sp_instance_34d587e4db3133000613a08a48961960</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;
+    &lt;sp_instance action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;class_name/&gt;
+        &lt;color&gt;default&lt;/color&gt;
+        &lt;css/&gt;
+        &lt;glyph/&gt;
+        &lt;id/&gt;
+        &lt;order&gt;1&lt;/order&gt;
+        &lt;roles/&gt;
+        &lt;short_description/&gt;
+        &lt;size&gt;md&lt;/size&gt;
+        &lt;sp_column display_value="1"&gt;43295ae1094232007f44e1046c8ff615&lt;/sp_column&gt;
+        &lt;sp_widget display_value="Notes List"&gt;06948fa8db3133000613a08a4896194c&lt;/sp_widget&gt;
+        &lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-05-30 18:18:27&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;34d587e4db3133000613a08a48961960&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Important Stuff&lt;/sys_name&gt;
+        &lt;sys_package display_value="CreateNotes" source="x_snc_createnotes"&gt;df5fd9a5090232007f44e1046c8ff69f&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="CreateNotes"&gt;df5fd9a5090232007f44e1046c8ff69f&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sp_instance_34d587e4db3133000613a08a48961960&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-05-30 23:12:31&lt;/sys_updated_on&gt;
+        &lt;title&gt;Important Stuff&lt;/title&gt;
+        &lt;url/&gt;
+        &lt;widget_parameters&gt;&lt;![CDATA[{
+	"title": {
+		"value": "Important Stuff",
+		"displayValue": "Important Stuff"
+	},
+	"maximum_records_to_display": {
+		"value": "6",
+		"displayValue": "6"
+	}
+}]]&gt;&lt;/widget_parameters&gt;
+    &lt;/sp_instance&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=34d587e4db3133000613a08a48961960"/&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-412406376</payload_hash>
+        <record_name>Important Stuff</record_name>
+        <reverted_from/>
+        <source>69fd3e73c3660210adfcbfddd401318d</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-09 16:31:53</sys_created_on>
+        <sys_id>eefd7e73c3660210adfcbfddd40131fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18ffdd78d3c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-09 16:31:53</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>aefd7e73f9660210f0b02a0efed276fb</update_guid>
+        <update_guid_history>aefd7e73f9660210f0b02a0efed276fb:-412406376</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Important Stuff">113713f3c3e60210adfcbfddd401314d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-09 18:22:07</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>124e0cfdd7894f14ba0341a1faac0b79</sys_id>
+        <sys_metadata>34d587e4db3133000613a08a48961960</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Important Stuff</sys_name>
+        <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
+        <sys_scope_delete display_value="">64daa03572704d49a928bf08a985d6f9</sys_scope_delete>
+        <sys_update_name>sp_instance_34d587e4db3133000613a08a48961960</sys_update_name>
+        <sys_update_version display_value="sp_instance_34d587e4db3133000613a08a48961960">eefd7e73c3660210adfcbfddd40131fb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-09 18:22:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
