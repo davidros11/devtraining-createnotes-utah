@@ -11,18 +11,31 @@
 		$rootScope.$emit('selectNote', {id: id, idx: idx});
 	}
 	$rootScope.$on('updateNote', function(event,data) {
-		c.data.notes[data.idx].title = data.title;
-		c.data.notes[data.idx].note = data.note.slice(0,20);
+		//c.data.notes[data.idx].title = data.title;
+		//c.data.notes[data.idx].note = data.note.slice(0,20);
 	});
 	$rootScope.$on('deleteNote', function(event,data) {
-		c.data.notes.splice(data.idx, 1);
+		//c.data.notes.splice(data.idx, 1);
 	});
+	
+	c.findByID = function(id) {
+		
+	}
 		
 	spUtil.recordWatch($scope, "x_snc_createnotes_note",
 										 "userDYNAMIC90d1921e5f510100a9ad2572f2b477fe",
 										 function(name) {
 		c.server.refresh();
 	});
+	
+	c.createNote = function() {
+		c.server.get({
+			action: 'createNote'
+		}).then(function(r) {
+			c.selectItem(0);
+		});
+	}
+	
 
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -40,10 +53,24 @@
         <option_schema>[{"hint":"Specify a title for the Notes List widget","name":"title","section":"other","default_value":"notes","label":"title","type":"string"},{"hint":"Select the maximum number of records to display","name":"maximum_records_to_display","section":"other","default_value":"5","label":"Maximum records to display","type":"choice","choices":[{"label":"3","value":"3"},{"label":"5","value":"5"},{"label":"7","value":"7"},{"label":"11","value":"11"},{"label":"13","value":"13"},{"label":"17","value":"17"}]}]</option_schema>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {
-	//create an array to populate with notes
-	data.notes = [];
+        <script><![CDATA[var defa = "This is a new note";
+
+(function() {
+	//create an array to populate with notes  
 	var noteGR = new GlideRecord('x_snc_createnotes_note');
+	if (input && input.action && input.action == 'createNote') {
+		noteGR.newRecord();
+		noteGR.setValue('user', gs.getUser().getID());
+		noteGR.setValue('title', defa);
+		noteGR.insert();
+		var noteObj = {};
+		$sp.getRecordDisplayValues(noteObj, noteGR, 'number,title,sys_id');
+		noteObj.note = noteGR.getValue('note').slice(0,20);
+		data.notes.unshift(noteObj);
+		return;
+	}
+	
+	data.notes = [];
 	noteGR.addQuery('user', gs.getUser().getID());
 	noteGR.orderByDesc('sys_created_on');
 	noteGR.setLimit(options.maximum_records_to_display);
@@ -63,14 +90,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-09 17:34:44</sys_created_on>
         <sys_id>1f5c47b3c3a60210adfcbfddd40131be</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>Notes List_1</sys_name>
         <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
         <sys_update_name>sp_widget_1f5c47b3c3a60210adfcbfddd40131be</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-12 19:21:51</sys_updated_on>
+        <sys_updated_on>2024-06-13 07:47:10</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
   <div class="panel-heading clearfix">
     <h3 class="panel-title pull-left">
@@ -87,6 +114,9 @@
       </p>
     </a>
   </div>
+  <button ng-click="c.createNote()" style="width: 100px; height: 50px;" border-color="red" >
+    New note
+  </button>
 </div>]]></template>
     </sp_widget>
 </record_update>
